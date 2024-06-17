@@ -1651,9 +1651,10 @@
                                                     $qu1 = mysqli_query($con, $select1);
                                                     $s_no = 1;
                                                     while ($row2 = mysqli_fetch_array($qu1)) {
+                                                        $inner_cat_name = $row2['inner_cat_name'];
 
                                                     ?>
-                                                        <p class=" p-0 m-0 d-block"><a href="" class="text-decoration-none p-0 m-0">
+                                                        <p class=" p-0 m-0 d-block"><a href="product.php?inner_cat_id=<?php echo $row2['inner_cat_id'] ?>" class="text-decoration-none p-0 m-0">
                                                                 <?php echo $row2['inner_cat_name'] ?></a></p>
                                                     <?php   } ?>
                                                 </div>

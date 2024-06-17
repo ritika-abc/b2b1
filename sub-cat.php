@@ -154,7 +154,8 @@
     $qu = mysqli_query($con, $select);
     $s_no = 1;
     while ($row = mysqli_fetch_array($qu)) {
-        $sub_id = $row['sub_id'];
+        // $sub_id = $row['sub_id'];
+        $inner_cat_id = $row['inner_cat_id'];
 
     ?>
         <div class="container-fluid my-5 p-3 border rounded bg-white">
@@ -162,19 +163,19 @@
             <div class="row">
                 <?php
                 include "config.php";
-                $sub_id = $_GET['sub_id'];
-                $select1 = "SELECT * from `micro` where `sub_id`='$sub_id' ";
-                $qu = mysqli_query($con, $select1);
-                $s_no = 1;
-                while ($row1 = mysqli_fetch_array($qu)) {
-                     $micro_name = $row1['micro_name'];
+                // $inner_cat_id = $_GET['inner_cat_id'];
+                $select1 = "SELECT * from `micro` where `inner_cat_id`='$inner_cat_id' ";
+                $qu1 = mysqli_query($con, $select1);
+                 
+                while ($row1 = mysqli_fetch_array($qu1)) {
+                     $micro_cat_image = $row1['micro_cat_image'];
 
                 ?>
                     <div class="col-6 col-md-4 col-lg-2 my-2">
                         <a href="" class="text-decoration-none text-dark">
                             <div class="text-center ">
                                 <div class=" ">
-                                    <img src="<?php ?>" class="rounded border" height="auto" style="object-fit:cover" width="55%" alt="">
+                                    <img src="./admin/<?php echo $row1['micro_cat_image'] ?>" class="rounded border" height="auto" style="object-fit:cover" width="55%" alt="">
                                     <p><?php echo $row1['micro_name'] ?></p>
                                 </div>
                             </div>

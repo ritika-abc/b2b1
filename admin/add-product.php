@@ -32,7 +32,12 @@ if (isset($_POST['submit'])) {
     $product_life = $_POST['product_life'];
 
 
-    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id')";
+    $prodict_image1 = $_FILES["prodict_image1"]["name"];
+    $fld1 = "extra_image/" . $prodict_image1;
+    // $fld2 = "upload/" . $image;
+    move_uploaded_file($_FILES["prodict_image1"]['tmp_name'], $fld1);
+
+    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`prodict_image1`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1')";
 
     $query = mysqli_query($con,$insert);
     
@@ -55,7 +60,7 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10 bg-white p-4">
-                <form action="" method="post" class="text-capitalize">
+                <form action="" method="post" enctype="multipart/form-data" class="text-capitalize">
                     <h5>Add products</h5>
                     <div class="row">
                         <div class="col-12 col-lg-6 my-2">
@@ -70,7 +75,7 @@ if (isset($_POST['submit'])) {
                                         <input class="form-control" name="prodict_image1" type="file" id="formFile">
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <!-- <div class="col-4">
                                     <div class="border">
                                         <input class="form-control" name="prodict_image1" type="file" id="formFile">
                                     </div>
@@ -79,7 +84,7 @@ if (isset($_POST['submit'])) {
                                     <div class="border">
                                         <input class="form-control" name="prodict_image1" type="file" id="formFile">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 my-2 text-capitalize">
