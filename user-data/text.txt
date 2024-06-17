@@ -1,0 +1,14 @@
+user data
+->user suppliar
+->user profile single
+->add products
+->view all buylaeds {from admin}
+->accesses buyleads (login plane data) ==> admin give accesses
+
+
+add products
+->cat
+->sub cat
+->inner cat
+->about company details
+->if company has a website url
