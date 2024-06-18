@@ -332,7 +332,7 @@
 
                 ?>
                     <li>
-                        <div class="classified  ">
+                        <div class="classified  my-5">
                             <div class="prd-info  ">
                                 <div class="prd-box">
                                     <img src="https://www.dial4trade.com/uploaded_files/product_images/coir-fibers-1051911.jpg" height="auto" width="100%" alt="">
@@ -360,7 +360,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="cinfo">
+                            <div class="cinfo ">
                                 <div class=" ">
                                     <div class=" ">
                                         <!-- <a href=" " class="text-decoration-none" target="_blank">
@@ -392,6 +392,10 @@
                                             <tr>
                                                 <th> <small>Experience</small> </th>
                                                 <td> <small><small><?php echo $row['exp'] ?></small></small> </td>
+                                            </tr>
+                                            <tr>
+                                                <th> <small>website Link</small> </th>
+                                                <td> <small><small><?php echo $row['website'] ?></small></small> </td>
                                             </tr>
                                         </table>
                                     </div>

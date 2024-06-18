@@ -394,6 +394,10 @@
                                                 <th> <small>Experience</small> </th>
                                                 <td> <small><small><?php echo $row['exp'] ?></small></small> </td>
                                             </tr>
+                                            <tr>
+                                                <th> <small>website Link</small> </th>
+                                                <td> <small><small><?php echo $row['website'] ?></small></small> </td>
+                                            </tr>
                                         </table>
                                     </div>
                                     <!-- <div class="cboxe">
