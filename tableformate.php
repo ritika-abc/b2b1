@@ -104,6 +104,72 @@ mysqli_close($con); // Close the database connection
 </head>
 
 <body>
+    <?php
+    include "config.php"; // Assuming this file connects to your database ($con)
+
+    $select = "SELECT 
+            c.cat_name, 
+            s.sub_cat_name, 
+            i.inner_cat_name, 
+            m.micro_name,
+            p.product_name
+        FROM 
+            category c
+        LEFT JOIN 
+            sub_cat s ON c.cat_id = s.cat_id
+        LEFT JOIN 
+            inner_cat i ON s.sub_id = i.sub_id
+        LEFT JOIN 
+            micro m ON i.inner_cat_id = m.inner_cat_id
+        LEFT JOIN 
+            product p ON m.micro_id = p.micro_id";
+
+    $result = mysqli_query($con, $select);
+
+    $categories = array(); // Array to store categories and their subcategories and inner categories
+
+    while ($row = mysqli_fetch_array($result)) {
+        $cat_name = $row['cat_name'];
+        $sub_cat_name = $row['sub_cat_name'];
+        $inner_cat_name = $row['inner_cat_name'];
+
+        // Store subcategories and inner categories grouped by categories and subcategories
+        if (!isset($categories[$cat_name][$sub_cat_name])) {
+            $categories[$cat_name][$sub_cat_name] = array();
+        }
+        $categories[$cat_name][$sub_cat_name][] = $inner_cat_name;
+    }
+
+    // Display the categories, subcategories, and inner categories in a card format
+
+    echo '<div class="card-container row">';
+
+    foreach ($categories as $category => $subcategories) {
+        echo '<div class="category-card col-12 border">';
+        echo '<h3>' . $category . '</h3>';
+
+        foreach ($subcategories as $subcategory => $innercategories) {
+            echo '<div class="subcategory">';
+            echo '<h4>' . $subcategory . '</h4>';
+
+            foreach ($innercategories as $innercategory) {
+                echo '<div class="inner-category">';
+                echo $innercategory;
+                echo '</div>';
+            }
+
+            echo '</div>'; // Close subcategory div
+        }
+
+        echo '</div>'; // Close category-card div
+    }
+
+    echo '</div>'; // Close card-container div
+
+    mysqli_close($con); // Close the database connection
+    ?>
+
+
 <?php
 include "config.php"; // Assuming this file connects to your database ($con)
 
@@ -132,7 +198,7 @@ while ($row = mysqli_fetch_array($result)) {
     $cat_name = $row['cat_name'];
     $sub_cat_name = $row['sub_cat_name'];
     $inner_cat_name = $row['inner_cat_name'];
-
+    
     // Store subcategories and inner categories grouped by categories and subcategories
     if (!isset($categories[$cat_name][$sub_cat_name])) {
         $categories[$cat_name][$sub_cat_name] = array();
@@ -140,31 +206,127 @@ while ($row = mysqli_fetch_array($result)) {
     $categories[$cat_name][$sub_cat_name][] = $inner_cat_name;
 }
 
-// Display the categories, subcategories, and inner categories in a card format
- 
-echo '<div class="card-container row">';
-
+// Display the categories, subcategories, and inner categories in a Bootstrap card format
+echo '<div class="container">';
 foreach ($categories as $category => $subcategories) {
-    echo '<div class="category-card col-12 border">';
-    echo '<h3>' . $category . '</h3>';
-
+    echo '<div class="row my-3 shadow-lg p-4">';
+    echo '<div class="col-12">';
+    echo '<h1>' . $category . '</h1>';
+    echo '<hr>';
     foreach ($subcategories as $subcategory => $innercategories) {
-        echo '<div class="subcategory">';
+        echo '<div class="row">';
+        echo '<div class="col-4">';
         echo '<h4>' . $subcategory . '</h4>';
-
         foreach ($innercategories as $innercategory) {
-            echo '<div class="inner-category">';
-            echo $innercategory;
-            echo '</div>';
+            echo '<p>' . $innercategory . '</p>';
         }
-
-        echo '</div>'; // Close subcategory div
+        echo '</div>'; // Close col-4
+        echo '</div>'; // Close row
     }
+    echo '</div>'; // Close col-12
+    echo '</div>'; // Close shadow-lg
+}
+echo '</div>'; // Close container
 
-    echo '</div>'; // Close category-card div
+mysqli_close($con); // Close the database connection
+?>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>cat name</h1>
+            <div class="row">
+                <div class="col-3 cards ">
+                    <div class="shadow-lg p-3">
+                    <h5>sun cat name</h5>
+                    <p>inner cat name</p>
+                    </div>
+                </div>
+                <div class="col-3 cards ">
+                    <div class="shadow-lg p-3">
+                    <h5>sun cat name</h5>
+                    <p>inner cat name</p>
+                    </div>
+                </div>
+                <div class="col-3 cards ">
+                    <div class="shadow-lg p-3">
+                    <h5>sun cat name</h5>
+                    <p>inner cat name</p>
+                    </div>
+                </div>
+                <div class="col-3 cards ">
+                    <div class="shadow-lg p-3">
+                    <h5>sun cat name</h5>
+                    <p>inner cat name</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+include "config.php"; // Assuming this file connects to your database ($con)
+
+$select = "SELECT 
+            c.cat_name, 
+            s.sub_cat_name, 
+            i.inner_cat_name, 
+            m.micro_name,
+            p.product_name
+        FROM 
+            category c
+        LEFT JOIN 
+            sub_cat s ON c.cat_id = s.cat_id
+        LEFT JOIN 
+            inner_cat i ON s.sub_id = i.sub_id
+        LEFT JOIN 
+            micro m ON i.inner_cat_id = m.inner_cat_id
+        LEFT JOIN 
+            product p ON m.micro_id = p.micro_id";
+
+$result = mysqli_query($con, $select);
+
+$categories = array(); // Array to store categories and their subcategories and inner categories
+
+while ($row = mysqli_fetch_array($result)) {
+    $cat_name = $row['cat_name'];
+    $sub_cat_name = $row['sub_cat_name'];
+    $inner_cat_name = $row['inner_cat_name'];
+    
+    // Store subcategories and inner categories grouped by categories and subcategories
+    if (!isset($categories[$cat_name][$sub_cat_name])) {
+        $categories[$cat_name][$sub_cat_name] = array();
+    }
+    $categories[$cat_name][$sub_cat_name][] = $inner_cat_name;
 }
 
-echo '</div>'; // Close card-container div
+// Display the categories, subcategories, and inner categories in the desired format
+echo '<div class="container">';
+foreach ($categories as $category => $subcategories) {
+    echo '<div class="row my-3">';
+    echo '<div class="col-12">';
+    echo '<h4>' . $category . '</h4>';
+    
+    echo '<div class="row">';
+    foreach ($subcategories as $subcategory => $innercategories) {
+        echo '<div class="col-3 cards">';
+        echo '<div class="shadow-lg p-3">';
+        echo '<h5>' . $subcategory . '</h5>';
+        
+        foreach ($innercategories as $innercategory) {
+            echo '<p>' . $innercategory . '</p>';
+        }
+        
+        echo '</div>'; // Close shadow-lg
+        echo '</div>'; // Close col-3
+    }
+    echo '</div>'; // Close row for subcategories
+    
+    echo '</div>'; // Close col-12
+    echo '</div>'; // Close row for category
+}
+echo '</div>'; // Close container
 
 mysqli_close($con); // Close the database connection
 ?>
