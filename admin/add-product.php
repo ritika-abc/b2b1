@@ -17,7 +17,7 @@ include "config.php";
 <?php
 if (isset($_POST['submit'])) {
     $product_name = $_POST['product_name'];
-    // $prodict_image1 = $_POST['prodict_image1'];
+    
     // $product_image2 = $_POST['product_image2'];
     // $product_image3 = $_POST['product_image3'];
     $cat_id = $_POST['cat_id'];
@@ -32,12 +32,12 @@ if (isset($_POST['submit'])) {
     $product_life = $_POST['product_life'];
 
 
-    $prodict_image1 = $_FILES["prodict_image1"]["name"];
-    $fld1 = "extra_image/" . $prodict_image1;
+    $product_image1 = $_FILES["product_image1"]["name"];
+    $fld1 = "extra_image/" . $product_image1;
     // $fld2 = "upload/" . $image;
-    move_uploaded_file($_FILES["prodict_image1"]['tmp_name'], $fld1);
+    move_uploaded_file($_FILES["product_image1"]['tmp_name'], $fld1);
 
-    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`prodict_image1`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1')";
+    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`product_image1`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1')";
 
     $query = mysqli_query($con,$insert);
     
@@ -72,17 +72,17 @@ if (isset($_POST['submit'])) {
                             <div class="row">
                                 <div class="col-4">
                                     <div class="border">
-                                        <input class="form-control" name="prodict_image1" type="file" id="formFile">
+                                        <input class="form-control" name="product_image1" type="file" id="formFile">
                                     </div>
                                 </div>
                                 <!-- <div class="col-4">
                                     <div class="border">
-                                        <input class="form-control" name="prodict_image1" type="file" id="formFile">
+                                        <input class="form-control" name="product_image1" type="file" id="formFile">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="border">
-                                        <input class="form-control" name="prodict_image1" type="file" id="formFile">
+                                        <input class="form-control" name="product_image1" type="file" id="formFile">
                                     </div>
                                 </div> -->
                             </div>

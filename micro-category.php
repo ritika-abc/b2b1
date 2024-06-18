@@ -162,9 +162,9 @@
                         <ul class="navbar-nav">
                             <?php
                             include "config.php";
-                            $inner_cat_id = $_GET['inner_cat_id'];
+                            $micro_id = $_GET['micro_id'];
 
-                            $select = "SELECT * from `micro`  where `inner_cat_id`='$inner_cat_id'";
+                            $select = "SELECT * from `micro`  where `micro_id`='$micro_id'";
                             $qu = mysqli_query($con, $select);
                             $s_no = 1;
                             while ($row = mysqli_fetch_array($qu)) {
@@ -235,29 +235,28 @@
             <!-- <div class="owl-carousel shadow-lg  alert alert-success my-5   p-3 rounded">
                 ?php
                 include "config.php";
+                
 
-
-                $select = "SELECT * from `micro` ";
+                $select = "SELECT * from `micro`";
                 $qu = mysqli_query($con, $select);
                 $s_no = 1;
                 while ($row = mysqli_fetch_array($qu)) {
-                    // $sub_id = $row['sub_id'];
 
 
                 ?>
-                    
+                    <a href="micro-category.php?micro_id=?php echo $row['micro_id'] ?>">
                         <div class="item text-center ">
-                        <a href="product.php?inner_cat_id=?php echo $row['inner_cat_id'] ?>" class="text-decoration-none">
+
                             <div class="  text-capitalize">
                                 <div class="category_image border border-dark border-2   ">
-                                    <img src=".admin/?php echo $row['micro_cat_image'] ?>" class="" style="object-fit: cover;" alt="No Image">
+                                    <img src="image/categoryimage/3.jpg" class="" style="object-fit: cover;" alt="">
                                 </div>
                                 <p>?php echo $row['micro_name'] ?></p>
                             </div>
-                    </a>
 
                         </div>
-                ?php  } ?>
+                    </a>
+                ?php } ?>
             </div> -->
             <!-- owl category end here -->
 
@@ -320,16 +319,16 @@
                     </div>
                 </div>
             </div> -->
-            <ul class="classfied-wrap list-unstyled mt-5">
+            <ul class="classfied-wrap list-unstyled">
                 <?php
                 include "config.php";
-                $inner_cat_id = $_GET['inner_cat_id'];
-                $select = "SELECT * from `product` where `inner_cat_id`='$inner_cat_id' ";
+                $micro_id = $_GET['micro_id'];
+                $select = "SELECT * from `product` where `micro_id`='$micro_id' ";
                 $qu = mysqli_query($con, $select);
                 $s_no = 1;
                 while ($row = mysqli_fetch_array($qu)) {
                     // $sub_id = $row['sub_id'];
-                    $inner_cat_id = $row['inner_cat_id'];
+
 
                 ?>
                     <li>

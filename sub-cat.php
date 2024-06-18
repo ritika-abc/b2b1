@@ -172,7 +172,7 @@
 
                 ?>
                     <div class="col-6 col-md-4 col-lg-2 my-2">
-                        <a href="" class="text-decoration-none text-dark">
+                        <a href="product.php?inner_cat_id=<?php echo $row['inner_cat_id'] ?>" class="text-decoration-none text-dark">
                             <div class="text-center ">
                                 <div class=" ">
                                     <img src="./admin/<?php echo $row1['micro_cat_image'] ?>" class="rounded border" height="auto" style="object-fit:cover" width="55%" alt="">
