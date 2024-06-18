@@ -270,7 +270,7 @@ include "config.php"; // Assuming this file connects to your database ($con)
 
 $select = "SELECT 
             c.cat_name, 
-            s.sub_cat_name, 
+            s.sub_cat_name, s.sub_id, 
             i.inner_cat_name, 
             m.micro_name,
             p.product_name
@@ -293,6 +293,7 @@ while ($row = mysqli_fetch_array($result)) {
     $cat_name = $row['cat_name'];
     $sub_cat_name = $row['sub_cat_name'];
     $inner_cat_name = $row['inner_cat_name'];
+    $sub_id = $row['sub_id'];
     
     // Store subcategories and inner categories grouped by categories and subcategories
     if (!isset($categories[$cat_name][$sub_cat_name])) {
@@ -306,7 +307,7 @@ echo '<div class="container">';
 foreach ($categories as $category => $subcategories) {
     echo '<div class="row my-3">';
     echo '<div class="col-12">';
-    echo '<h4>' . $category . '</h4>';
+    echo '<h4><a href="sub-cat.php?sub_id=' . $category . '">' . $category . '</a></h4>';
     
     echo '<div class="row">';
     foreach ($subcategories as $subcategory => $innercategories) {
@@ -315,6 +316,78 @@ foreach ($categories as $category => $subcategories) {
         echo '<h5>' . $subcategory . '</h5>';
         
         foreach ($innercategories as $innercategory) {
+            echo '<p>' . $innercategory . '</p>';
+        }
+        
+        echo '</div>'; // Close shadow-lg
+        echo '</div>'; // Close col-3
+    }
+    echo '</div>'; // Close row for subcategories
+    
+    echo '</div>'; // Close col-12
+    echo '</div>'; // Close row for category
+}
+echo '</div>'; // Close container
+
+mysqli_close($con); // Close the database connection
+?>
+
+
+
+
+<?php
+include "config.php"; // Assuming this file connects to your database ($con)
+
+$select = "SELECT 
+            c.cat_name, 
+            s.sub_id,
+            s.sub_cat_name, 
+            GROUP_CONCAT(i.inner_cat_name SEPARATOR '|') AS inner_categories
+        FROM 
+            category c
+        LEFT JOIN 
+            sub_cat s ON c.cat_id = s.cat_id
+        LEFT JOIN 
+            inner_cat i ON s.sub_id = i.sub_id
+        GROUP BY 
+            c.cat_id, s.sub_id";
+
+$result = mysqli_query($con, $select);
+
+$categories = array(); // Array to store categories and their subcategories
+
+while ($row = mysqli_fetch_array($result)) {
+    $cat_name = $row['cat_name'];
+    $sub_id = $row['sub_id'];
+    $sub_cat_name = $row['sub_cat_name'];
+    $inner_categories = explode('|', $row['inner_categories']); // Convert string to array
+    
+    // Store subcategories and inner categories grouped by categories and subcategories
+    if (!isset($categories[$cat_name])) {
+        $categories[$cat_name] = array();
+    }
+    
+    $categories[$cat_name][] = array(
+        'sub_id' => $sub_id,
+        'sub_cat_name' => $sub_cat_name,
+        'inner_categories' => $inner_categories
+    );
+}
+
+// Display the categories, subcategories, and inner categories in the desired format
+echo '<div class="container">';
+foreach ($categories as $category => $subcategories) {
+    echo '<div class="row my-3">';
+    echo '<div class="col-12">';
+    echo '<h4><a href="sub-cat.php?sub_id=' . $subcategories[0]['sub_id'] . '">' . $category . '</a></h4>';
+    
+    echo '<div class="row">';
+    foreach ($subcategories as $subcategory) {
+        echo '<div class="col-3 cards">';
+        echo '<div class="shadow-lg p-3">';
+        echo '<h5>' . $subcategory['sub_cat_name'] . '</h5>';
+        
+        foreach ($subcategory['inner_categories'] as $innercategory) {
             echo '<p>' . $innercategory . '</p>';
         }
         
