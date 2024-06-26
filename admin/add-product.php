@@ -32,13 +32,26 @@ if (isset($_POST['submit'])) {
     $product_life = $_POST['product_life'];
     $state_name = $_POST['state_name'];
 
+    $company_name = $_POST['company_name'];
+    $company_experience = $_POST['company_experience'];
+    $iec = $_POST['iec'];
+    $gst = $_POST['gst'];
+    $website = $_POST['website'];
+    // $company_logo = $_POST['company_logo'];
+ 
+
 
     $product_image1 = $_FILES["product_image1"]["name"];
     $fld1 = "extra_image/" . $product_image1;
     // $fld2 = "upload/" . $image;
     move_uploaded_file($_FILES["product_image1"]['tmp_name'], $fld1);
 
-    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`product_image1`,`state_name`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1','$state_name')";
+    $company_logo = $_FILES["company_logo"]["name"];
+    $fld2 = "extra_image/" . $company_logo;
+    // $fld2 = "upload/" . $image;
+    move_uploaded_file($_FILES["company_logo"]['tmp_name'], $fld2);
+
+    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`product_image1`,`state_name`,`company_name`,`company_experience`,`iec`,`gst`,`website`,`company_logo`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1','$state_name','$company_name','$company_experience','$iec','$gst','$website','$fld2')";
 
     $query = mysqli_query($con,$insert);
     
@@ -196,36 +209,48 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                     <hr>
-                    <!-- <div class="row my-4 border border-warning p-3 rounded">
+                    <div class="row my-4 border border-warning p-3 rounded">
                         <div class="col-12">
-                            <h5>Company Details / optional details*</h5>
+                            <h5>Company Details  </h5>
                             <div class="col-12 col-md-3 my-2">
                                 <label for="">Company Name</label>
-                                <input class="form-control   " name=" " type="text" id="formFile">
+                                <input class="form-control   " name="company_name" type="text" id="formFile">
                             </div>
                             <div class="col-12 col-md-3 my-2">
-                                <label for="">Company experience</label>
+                                <label for="">Client Name</label>
                                 <input class="form-control   " name="company_experience" type="text" id="formFile">
                             </div>
                             <div class="col-12 col-md-3 my-2">
-                                <label for="">Company Logo</label>
+                                <label for="">IEC Code</label>
                                 <div class="border">
-                                    <input class="form-control   " name="company_experience" type="file" id="formFile">
+                                    <input class="form-control   " name="iec" type="text" id="formFile">
 
                                 </div>
                             </div>
                             <div class="col-12 col-md-3 my-2">
-                                <label for="">Company Type</label>
-                                <select name="" class="form-control" id="">
-                                    <option value="">---- Select----</option>
-                                </select>
+                                <label for="">GST Number</label>
+                                <div class="border">
+                                    <input class="form-control   " name="gst" type="text" id="formFile">
+
+                                </div>
                             </div>
-                            <div class="col-12 col-md-12 my-2">
-                                <label for="">Company decsription</label>
-                               <textarea name="" class="form-control" id=""></textarea>
+                             
+                            <div class="col-12 col-md-3 my-2">
+                                <label for="">website Link</label>
+                                <div class="border">
+                                    <input class="form-control" name="website" type="text" id="formFile">
+                                </div>
                             </div>
+                            <div class="col-12 col-md-3 my-2">
+                                <label for="">Company Logo*</label>
+                                <div class="border">
+                                    <input class="form-control" name="company_logo" type="file" id="formFile">
+                                </div>
+                            </div>
+                            
+                          
                         </div>
-                    </div> -->
+                    </div>
                     <input type="submit" name="submit" class="btn btn-danger  w-25">
                     <input type="reset" name="submit" class="btn btn-warning   ">
                 </form>
