@@ -20,6 +20,11 @@
             /* background-color: #f0f1f2 !important; */
             font-family: "Roboto", sans-serif;
         }
+        .responsive_image img{
+                        height: 200px;
+                        width: 200px;
+                        object-fit: cover;
+                }
     </style>
 </head>
 
@@ -334,8 +339,8 @@
                     <li>
                         <div class="classified  my-5">
                             <div class="prd-info  ">
-                                <div class="prd-box">
-                                    <img src="https://www.dial4trade.com/uploaded_files/product_images/coir-fibers-1051911.jpg" height="auto" width="100%" alt="">
+                                <div class="prd-box responsive_image">
+                                    <img src="./admin/<?php echo $row['product_image1'] ?>" height="auto" width="100%" alt="">
                                     <div class="prd-content">
                                         <a href="" class="d-inline-block text-decoration-none" target="_blank">
                                             <h3 class="title text-capitalize"><?php echo $row['product_name'] ?></h3>

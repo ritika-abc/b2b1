@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/megadrop.css">
+    <link rel="stylesheet" href="/new_b2b/assets/css/megadrop.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-    <script src="assets/vendor/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="/new_b2b/assets/css/style.css">
+    <link rel="stylesheet" href="/new_b2b/assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/new_b2b/assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <script src="/new_b2b/assets/vendor/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <link rel="stylesheet" href="/new_b2b/assets/css/style.css">
+    <script src="/new_b2b/assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             /* background-color: #f0f1f2 !important; */
             font-family: "Roboto", sans-serif;
+        }
+
+        .responsive_image img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -323,8 +329,20 @@
             <ul class="classfied-wrap list-unstyled mt-5">
                 <?php
                 include "config.php";
-                $inner_cat_id = $_GET['inner_cat_id'];
-                $select = "SELECT * from `product` where `inner_cat_id`='$inner_cat_id' ";
+                // if ($_GET['id']) {
+                //     echo $id = $_GET['id'];
+                // }
+                if ($_GET['inner_cat_id'] && $_GET['state_name']) {
+                    echo  $inner_cat_id = $_GET['inner_cat_id'];
+                    echo $state_name = $_GET['state_name'];
+                $select = "SELECT * from `product` where `inner_cat_id`='$inner_cat_id'  and    `state_name`='$state_name'";
+
+                }else{
+                    echo  $inner_cat_id = $_GET['inner_cat_id'];
+               
+                $select = "SELECT * from `product` where `inner_cat_id`='$inner_cat_id'  ";
+                }
+
                 $qu = mysqli_query($con, $select);
                 $s_no = 1;
                 while ($row = mysqli_fetch_array($qu)) {
@@ -335,8 +353,8 @@
                     <li>
                         <div class="classified  ">
                             <div class="prd-info  ">
-                                <div class="prd-box">
-                                    <img src="https://www.dial4trade.com/uploaded_files/product_images/coir-fibers-1051911.jpg" height="auto" width="100%" alt="">
+                                <div class="prd-box responsive_image">
+                                    <img src="./admin/<?php echo $row['product_image1'] ?>" height="auto" width="100%" alt="">
                                     <div class="prd-content">
                                         <a href="" class="d-inline-block text-decoration-none" target="_blank">
                                             <h3 class="title text-capitalize"><?php echo $row['product_name'] ?></h3>

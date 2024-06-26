@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
     $feature = $_POST['feature'];
     $packaging_type = $_POST['packaging_type'];
     $product_life = $_POST['product_life'];
+    $state_name = $_POST['state_name'];
 
 
     $product_image1 = $_FILES["product_image1"]["name"];
@@ -37,7 +38,7 @@ if (isset($_POST['submit'])) {
     // $fld2 = "upload/" . $image;
     move_uploaded_file($_FILES["product_image1"]['tmp_name'], $fld1);
 
-    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`product_image1`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1')";
+    $insert="INSERT INTO `product`(`product_name`,`price`,`product_description`,`moq`, `packaging_type`, `product_life`, `feature`,  `cat_id`, `sub_id`,`micro_id`,`inner_cat_id`,`product_image1`,`state_name`) VALUES ('$product_name','$price','$product_description','$moq','$product_life','$feature','$product_name','$cat_id','$sub_id','$micro_id','$inner_cat_id','$fld1','$state_name')";
 
     $query = mysqli_query($con,$insert);
     
@@ -142,6 +143,21 @@ if (isset($_POST['submit'])) {
                                 while ($row = mysqli_fetch_array($query)) {
                                 ?>
                                     <option value="<?php echo $row['micro_id'] ?>" class="text-capitalize"><?php echo $row['micro_name'] ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-6 my-2">
+                            <label for="">add micro Category</label>
+                            <select name="state_name" class="form-control" id="micro-category-dropdown">
+                                <option value="">------   states  -----</option>
+                                <?php
+                                $sel = "SELECT * FROM `states`";
+                                $query = mysqli_query($con, $sel);
+                                while ($row = mysqli_fetch_array($query)) {
+                                ?>
+                                    <option value="<?php echo $row['state_name'] ?>" class="text-capitalize"><?php echo $row['state_name'] ?></option>
                                 <?php
                                 }
                                 ?>

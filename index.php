@@ -12,12 +12,26 @@
         <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
         <script src="assets/vendor/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-
+        <link rel="stylesheet" href="./assets/css/new-style.css">
         <script src="assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
         <style>
                 body {
                         background-color: #fdfdfd !important;
                         font-family: "Roboto", sans-serif;
+                }
+
+                a {
+                        text-decoration: none;
+                }
+
+                ul {
+                        list-style: none;
+                }
+
+                .responsive_image img {
+                        height: 200px;
+                        width: 100%;
+                        object-fit: cover;
                 }
         </style>
 </head>
@@ -30,8 +44,7 @@
                         <div class="row">
                                 <div class="col-12">
                                         <ul class="nav ">
-                                                <li class="nav-item"><a href="" class="nav-link text-white">Hi User! <u class="mx-1">sign
-                                                                        in</u></a></li>
+                                                <li class="nav-item"><a href="supplier-login.php" class="nav-link text-white btn "> <button class="btn btn-dark"> Login Supplier</button> </a></li>
                                                 <li class="nav-item   w-50"><a href="" class="nav-link text-white">
                                                                 <marquee behavior="" direction="">Lorem, ipsum dolor sit amet consectetur adipisicing
                                                                         elit. Quisquam, et.</marquee>
@@ -74,16 +87,18 @@
         <div class="header_top">
 
                 <ul class="nav p-3 border shadow-sm">
-                        <li class="nav-item me-auto"><a href="" class="nav-link"><img src="assets/image/logo/logo.webp" height="50px" width="180px" alt=""></a></li>
-                        <li class="nav-item mt-3">
+                        <li class="nav-item  "><a href="" class="nav-link"><img src="assets/image/logo/logo.webp" height="50px" width="180px" alt=""></a></li>
+                        <li class="nav-item ms-auto mt-3">
                                 <form action="">
                                         <div class="input_box   ">
-                                                <input type="text" class="p-2 px-3 border-end">
+                                                <input type="text" placeholder="Buyleads & Products" class="p-2 px-3 border-end">
                                                 <button class="px-2">Submit</button>
                                         </div>
                                 </form>
                         </li>
-                        <li class="nav-item mt-2 mx-3"><a href="" class=" ">
+                        <li class="nav-item  "><a href="" class="nav-link"><button class="btn btn-primary px-3 rounded-pill mt-2">POST YOUR BUY REQUIREMENT</button></a></li>
+
+                        <!-- <li class="nav-item mt-2 mx-3"><a href="" class=" ">
                                         <div class="user_icon text-center">
                                                 <img src="image/icon/mailgif.gif" height="25px" width="25px" alt=""> <br>
                                                 <a href="" class="text-decoration-none"><small>Sign In</small></a> / <a href="" class="text-decoration-none"><small>Join</small></a>
@@ -107,12 +122,19 @@
 
                                         </div>
                                 </a>
-                        </li>
+                        </li> -->
+                </ul>
+        </div>
+        <div class="mid_header  ">
+                <ul class="nav">
+                        <li class="nav-item"><a href="" class="nav-link">text</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">text</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">text</a></li>
                 </ul>
         </div>
         <!-- logo here -->
         <!-- lg nav bar start here -->
-        <section class="browse-cat-sec">
+        <section class="browse-cat-sec d-none d-sm-none d-md-none d-lg-block">
                 <div class="fw">
                         <div class="browse-cat fo">
                                 <aside class="sidebar">
@@ -122,7 +144,8 @@
                                                 </div>
                                                 <ul class="mc-list">
                                                         <li class="mcl-iteam">
-                                                                <a href="/industry/home-supplies.htm"><img src=" " class="svg_icon" alt="HomeSupplies" width="22" height="22" loading="lazy" decoding="async" fetchpriority="low" />Home Supplies </a>
+                                                                <a href="/industry/home-supplies.htm"><img src=" " class="svg_icon" alt="HomeSupplies" width="22" height="22" loading="lazy" decoding="async" fetchpriority="low" />Home
+                                                                        Supplies </a>
                                                                 <ul class="mcsc" id="sub_cat_11948">
                                                                         <li class="mcsc-iteam">
                                                                                 <p class="mcsc-heading"><a href="/indian-manufacturers/dinnerware-tableware.htm">Dinnerware,
@@ -183,7 +206,8 @@
                                                                                                         Ash</a></li>
                                                                                         <li><a href="/indian-suppliers/detergent.htm">Detergent</a>
                                                                                         </li>
-                                                                                        <li><a href="/indian-manufacturers/soaps-detergents.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/soaps-detergents.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -198,7 +222,8 @@
                                                                                                         Carrier</a></li>
                                                                                         <li><a href="/indian-suppliers/baby-cradle.htm">Baby
                                                                                                         Cradle</a></li>
-                                                                                        <li><a href="/indian-manufacturers/baby-products.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/baby-products.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -304,7 +329,8 @@
                                                                                                         Flower</a></li>
                                                                                         <li><a href="/indian-suppliers/lily-flower.htm">Lily
                                                                                                         Flower</a></li>
-                                                                                        <li><a href="/indian-manufacturers/flowers-plant.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/flowers-plant.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -369,7 +395,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/chlorpyrifos.htm">Chlorpyrifos</a>
                                                                                         </li>
-                                                                                        <li><a href="/indian-manufacturers/agrochemicals.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/agrochemicals.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -449,7 +476,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/yoghurt.htm">Curd</a>
                                                                                         </li>
-                                                                                        <li><a href="/indian-manufacturers/dairy-products.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/dairy-products.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -484,7 +512,8 @@
                                                                                                         & Buns</a></li>
                                                                                         <li><a href="/indian-suppliers/hot-dog.htm">Hot
                                                                                                         Dog</a></li>
-                                                                                        <li><a href="/indian-manufacturers/confectionery.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/confectionery.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -501,7 +530,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/popcorn.htm">Popcorn</a>
                                                                                         </li>
-                                                                                        <li><a href="/indian-manufacturers/sweets-namkeen.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/sweets-namkeen.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -559,7 +589,8 @@
                                                                 </ul>
                                                         </li>
                                                         <li class="mcl-iteam">
-                                                                <a href="/industry/fashion-apparel.htm"><img src=" " class="svg_icon" alt="ApparelFashion" width="22" height="22" loading="lazy" decoding="async" fetchpriority="low" />Apparel & Fashion </a>
+                                                                <a href="/industry/fashion-apparel.htm"><img src=" " class="svg_icon" alt="ApparelFashion" width="22" height="22" loading="lazy" decoding="async" fetchpriority="low" />Apparel
+                                                                        & Fashion </a>
                                                                 <ul class="mcsc" id="sub_cat_10086">
                                                                         <li class="mcsc-iteam">
                                                                                 <p class="mcsc-heading"><a href="/indian-manufacturers/winter-clothing.htm">Winter
@@ -575,7 +606,8 @@
                                                                                                         Wear</a></li>
                                                                                         <li><a href="/indian-suppliers/winter-jackets.htm">Winter
                                                                                                         Jackets</a></li>
-                                                                                        <li><a href="/indian-manufacturers/winter-clothing.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/winter-clothing.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -628,7 +660,8 @@
                                                                                                         Blouses</a></li>
                                                                                         <li><a href="/indian-suppliers/salwar-kameez.htm">Salwar
                                                                                                         Kameez</a></li>
-                                                                                        <li><a href="/indian-manufacturers/womens-clothing.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/womens-clothing.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -663,7 +696,8 @@
                                                                                                         Leather Jacket</a></li>
                                                                                         <li><a href="/indian-suppliers/leather-jeans.htm">Leather
                                                                                                         Jeans</a></li>
-                                                                                        <li><a href="/indian-manufacturers/leather-clothing.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/leather-clothing.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -680,7 +714,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/suitstuxedo.htm">Mens
                                                                                                         Suits</a></li>
-                                                                                        <li><a href="/indian-manufacturers/mens-clothing.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/mens-clothing.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                 </ul>
@@ -700,7 +735,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/nitric-oxide.htm">Nitric
                                                                                                         Oxide</a></li>
-                                                                                        <li><a href="/indian-manufacturers/industrial-gases.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/industrial-gases.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -738,7 +774,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/trichoderma.htm">Trichoderma</a>
                                                                                         </li>
-                                                                                        <li><a href="/indian-manufacturers/agrochemicals.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/agrochemicals.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -753,7 +790,8 @@
                                                                                                         Clay</a></li>
                                                                                         <li><a href="/indian-suppliers/anthocyanin.htm">Anthocyanin</a>
                                                                                         </li>
-                                                                                        <li><a href="/indian-manufacturers/dyes-pigments.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/dyes-pigments.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -1033,7 +1071,8 @@
                                                                                                         Window</a></li>
                                                                                         <li><a href="/indian-suppliers/upvc-doors.htm">UPVC
                                                                                                         Doors</a></li>
-                                                                                        <li><a href="/indian-manufacturers/doors-windows.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/doors-windows.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                 </ul>
@@ -1057,7 +1096,8 @@
                                                                                                         Iron Furniture</a></li>
                                                                                         <li><a href="/indian-suppliers/iron-table.htm">Iron
                                                                                                         Table</a></li>
-                                                                                        <li><a href="/indian-manufacturers/metal-furnitures.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/metal-furnitures.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -1089,7 +1129,8 @@
                                                                                         </li>
                                                                                         <li><a href="/indian-suppliers/bean-bags.htm">Bean
                                                                                                         Bags</a></li>
-                                                                                        <li><a href="/indian-manufacturers/living-furniture.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/living-furniture.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -1114,7 +1155,8 @@
                                                                 </ul>
                                                         </li>
                                                         <li class="mcl-iteam">
-                                                                <a href="/industry/health-beauty.htm"><img src=" " class="svg_icon" alt="HealthBeauty" width="22" height="22" loading="lazy" decoding="async" fetchpriority="low" />Health & Beauty </a>
+                                                                <a href="/industry/health-beauty.htm"><img src=" " class="svg_icon" alt="HealthBeauty" width="22" height="22" loading="lazy" decoding="async" fetchpriority="low" />Health
+                                                                        & Beauty </a>
                                                                 <ul class="mcsc" id="sub_cat_11132">
                                                                         <li class="mcsc-iteam">
                                                                                 <p class="mcsc-heading"><a href="/indian-manufacturers/essential-oils.htm">Aromatic
@@ -1130,7 +1172,8 @@
                                                                                                         Oil</a></li>
                                                                                         <li><a href="/indian-suppliers/neem-oil.htm">Neem
                                                                                                         Oil</a></li>
-                                                                                        <li><a href="/indian-manufacturers/essential-oils.htm" class="silver ts0">View More</a></li>
+                                                                                        <li><a href="/indian-manufacturers/essential-oils.htm" class="silver ts0">View
+                                                                                                        More</a></li>
                                                                                 </ul>
                                                                         </li>
                                                                         <li class="mcsc-iteam">
@@ -1189,70 +1232,6 @@
                                                                 <img class="all-cl-img" src=" " alt="All Categories" width="22" height="22" decoding="async" fetchpriority="low">
                                                                 All Categories
                                                         </a>
-                                                        <!-- <ul class="all-cl-list">
-                                <li><a href="/industry/agriculture.htm">Agriculture</a>
-                                </li>
-                                <li><a href="/industry/fashion-apparel.htm">Apparel &
-                                        Fashion</a></li>
-                                <li><a href="/industry/automobile.htm">Automobile</a></li>
-                                <li><a href="/industry/ayurvedic-herbal.htm">Ayurveda &
-                                        Herbal</a></li>
-                                <li><a href="/indian-services/">Business Services</a></li>
-                                <li><a href="/industry/chemicals.htm">Chemical</a></li>
-                                <li><a href="/industry/computers-internet.htm">Computers
-                                        and Internet</a></li>
-                                <li><a href="/industry/consumer-electronics.htm">Consumer
-                                        Electronics</a></li>
-                                <li><a href="/industry/cosmetics-personal-care.htm">Cosmetics
-                                        & Personal Care</a></li>
-                                <li><a href="/industry/electronics-electrical.htm">Electronics
-                                        & Electrical</a></li>
-                                <li><a href="/industry/food-beverages.htm">Food Products &
-                                        Beverage</a></li>
-                                <li><a href="/industry/furniture.htm">Furniture &
-                                        Carpentry Services</a></li>
-                                <li><a href="/industry/gifts-crafts.htm">Gifts &
-                                        Crafts</a></li>
-                                <li><a href="/industry/health-beauty.htm">Health &
-                                        Beauty</a></li>
-                                <li><a href="/industry/home-furnishings.htm">Home
-                                        Furnishings</a></li>
-                                <li><a href="/industry/home-supplies.htm">Home
-                                        Supplies</a></li>
-                                <li><a href="/industry/machines.htm">Industrial
-                                        Machinery</a></li>
-                                <li><a href="/industry/industrial-supply.htm">Industrial
-                                        Supplies</a></li>
-                                <li><a href="/industry/jeweller.htm">Jewelry & Jewelry
-                                        Designers</a></li>
-                                <li><a href="/industry/mineral-metals.htm">Mineral &
-                                        Metals</a></li>
-                                <li><a href="/industry/office-supplies.htm">Office
-                                        Supplies</a></li>
-                                <li><a href="/industry/packaging-paper.htm">Packaging &
-                                        Paper</a></li>
-                                <li><a href="/industry/realestate-construction.htm">Realestate,
-                                        Building & Construction</a></li>
-                                <li><a href="/industry/security-protection.htm">Security
-                                        Products & Services</a></li>
-                                <li><a href="/industry/sports-entertainment.htm">Sports
-                                        Goods and Entertainment</a></li>
-                                <li><a
-                                        href="/industry/telecommunications.htm">Telecommunication</a>
-                                </li>
-                                <li><a href="/industry/textiles.htm">Textiles, Yarn &
-                                        Fabrics</a></li>
-                                <li><a href="/industry/tools.htm">Tools & Equipment</a>
-                                </li>
-                                <li><a href="/industry/tours-travels-hotels.htm">Tours,
-                                        Travels & Hotels</a></li>
-                                <li><a href="/industry/toys.htm">Toys & Games</a></li>
-                                <li><a
-                                        href="/industry/transportation-logistics-services.htm">Transportation
-                                        and Logistics</a></li>
-
-                            </ul> -->
-
                                                 </div>
                                         </div>
                                 </aside>
@@ -1279,230 +1258,70 @@
                                                 </button>
                                         </div>
                                 </div>
-                                <!-- <div class="banner">
-                    <div class="gallery-slider">
-                        <div class="slider1">
-                            <img class="slider-img" alt="Buy at ExportersIndia.com - Over 16+ Lakh Suppliers"
-                                loading="lazy" decoding="async" fetchpriority="low"
-                                src=" " width="870"
-                                height="460">
-                            <div class="bx-caption ffrr">
-                                <span class="bc-heading">Buy at ExportersIndia.com</span> <span class="bc-text">- Over
-                                    16+ Lakh Suppliers</span> <span class="bc-text">- More than 75 Lakh Products</span>
-                                <span class="bc-text">- More than 1.2 Crore Buyers</span>
-                                <a href="/post-buy-requirement.php">Get Instant Quotes</a>
-                            </div>
-                            <div class="banner-thumbnil">
-                                <ul>
-                                    <li>
-                                        <a href="/indian-suppliers/kashmiri-suits.htm" target="_blank"
-                                            title="Kashmiri Suits" class="thumb-img db"> <img
-                                                src=" "
-                                                width="212" height="300" loading="lazy" decoding="async"
-                                                fetchpriority="low" alt="Kashmiri Suits"> </a>
-                                        <a href="/indian-suppliers/kashmiri-suits.htm" target="_blank"
-                                            title="Kashmiri Suits" class="thumb-name">Kashmiri Suits</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/knitted-garment.htm" target="_blank"
-                                            title="Knitted Garment" class="thumb-img db"> <img
-                                                src="https://img2.exportersindia.com/product_images/bc-small/dir_49/1465676/ladies-knits-garments-2325878.jpg"
-                                                width="200" height="200" loading="lazy" decoding="async"
-                                                fetchpriority="low" alt="Knitted Garment"> </a>
-                                        <a href="/indian-suppliers/knitted-garment.htm" target="_blank"
-                                            title="Knitted Garment" class="thumb-name">Knitted
-                                            Garment</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/ladies-designer-suits.htm" title="Designer Suits"
-                                            target="_blank" class="thumb-img db"> <img
-                                                src="https://img1.exportersindia.com/product_images/bc-small/2019/1/2990740/watermark/kota-doria-designer-suits-1544519839-4556590.jpeg"
-                                                width="225" height="300" loading="lazy" decoding="async"
-                                                fetchpriority="low" alt="Designer Suits"> </a>
-                                        <a href="/indian-suppliers/ladies-designer-suits.htm" title="Designer Suits"
-                                            target="_blank" class="thumb-name">Designer Suits</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="slider2"> <img class="slider-img"
-                                src="https://static.exportersindia.com/ei_images/home-slide/covind_19_bg2.jpg" alt=""
-                                width="868" height="459" loading="lazy" decoding="async" fetchpriority="low">
-                            <div class="bx-caption ffrr"> <span class="bc-heading"
-                                    style="margin-bottom:20px;font-size: 26px;">Essential
-                                    Supplies & Goods</span> <span
-                                    style="font-size:22px;line-height:30px;margin-bottom:30px;">• Grocery<br>
-                                    • Home Cleaning<br>
-                                    • Personal Care<br>
-                                    • Health & Fitness<br>
-                                    • For Your Little Ones</span> <a href="/post-buy-requirement.php"
-                                    style="background:#fff;color:#333;border-radius:20px;">Explore Now</a> </div>
-                            <div class="banner-thumbnil">
-                                <ul>
-                                    <li> <a href="/indian-manufacturers/fruits.htm" target="_blank"
-                                            title="Fruits Suppliers" class="thumb-img db"> <img
-                                                src="https://img1.exportersindia.com/final_catg_image/66382-1.jpg"
-                                                alt="Fruits Suppliers" width="105" height="105" loading="lazy"
-                                                decoding="async" fetchpriority="low"> </a> <a
-                                            href="/indian-manufacturers/fruits.htm" target="_blank"
-                                            title="Fruits Suppliers" class="thumb-name" style="color:#333">Fruits
-                                            Suppliers</a> </li>
-                                    <li> <a href="/indian-suppliers/food-grains.htm" target="_blank" title="Food Grains"
-                                            class="thumb-img db"> <img
-                                                src="https://img1.exportersindia.com/final_catg_image/198100-1.jpg"
-                                                alt="Food Grains" width="105" height="105" loading="lazy"
-                                                decoding="async" fetchpriority="low"> </a> <a
-                                            href="/indian-suppliers/food-grains.htm" target="_blank" title="Food Grains"
-                                            class="thumb-name" style="color:#333">Food Grains</a> </li>
-                                    <li> <a href="/indian-manufacturers/dairy-products.htm" target="_blank"
-                                            title="Dairy Products" class="thumb-img db"> <img
-                                                src="https://img1.exportersindia.com/final_catg_image/124966-1.jpg"
-                                                alt="Dairy Products" width="105" height="105" loading="lazy"
-                                                decoding="async" fetchpriority="low"> </a> <a
-                                            href="/indian-manufacturers/dairy-products.htm" target="_blank"
-                                            title="Dairy Products" class="thumb-name" style="color:#333">Dairy
-                                            Products</a> </li>
-                                    <li> <a href="/indian-manufacturers/vegetables.htm" target="_blank"
-                                            title="Vegetables Suppliers" class="thumb-img db"> <img
-                                                src="https://img1.exportersindia.com/final_catg_image/74635-1.jpg"
-                                                alt="Vegetables Suppliers" width="105" height="105" loading="lazy"
-                                                decoding="async" fetchpriority="low"> </a> <a
-                                            href="/indian-manufacturers/vegetables.htm" target="_blank"
-                                            title="Vegetables Suppliers" class="thumb-name"
-                                            style="color:#333">Vegetables Suppliers</a> </li>
-                                    <li> <a href="/indian-manufacturers/spices.htm" target="_blank"
-                                            title="Cooking Spices" class="thumb-img db"> <img
-                                                src="https://img1.exportersindia.com/final_catg_image/69883-450.jpg"
-                                                alt="Cooking Spices" width="105" height="105" loading="lazy"
-                                                decoding="async" fetchpriority="low"> </a> <a
-                                            href="/indian-manufacturers/spices.htm" target="_blank"
-                                            title="Cooking Spices" class="thumb-name" style="color:#333">Cooking
-                                            Spices</a> </li>
-                                    <li> <a href="/indian-suppliers/floor-cleaner.htm" target="_blank"
-                                            title="Floor Cleaner" class="thumb-img db"> <img
-                                                src="https://img3.exportersindia.com/product_images/bc-small/2019/11/3427268/dux-plus-concentrated-floor-cleaner-1573208917-5134176.jpeg"
-                                                alt="Floor Cleaner" width="105" height="105" loading="lazy"
-                                                decoding="async" fetchpriority="low"> </a> <a
-                                            href="/indian-suppliers/floor-cleaner.htm" target="_blank"
-                                            title="Floor Cleaner" class="thumb-name" style="color:#333">Floor
-                                            Cleaner</a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="slider3">
-                            <img class="slider-img" title="Best Selling 
- ASHIONABLE PRODUCTS & TRENDING ITEMS" loading="lazy"
-                                src="https://static.exportersindia.com/ei_images/index-banner-slider3.jpg" width="870"
-                                height="460">
-                            <div class="bx-caption ffrr">
-                                <span class="bc-heading">Best Selling</span>
-                                <span class="bc-text">Fashionable Products <br>& <span style="font-size: 34px"> Trending
-                                        Items</span></span>
-                                <a href="/post-buy-requirement.php">Source Now</a>
-                            </div>
-                            <div class="banner-thumbnil">
-                                <ul>
-                                    <li>
-                                        <a href="/indian-suppliers/golden-basmati-rice.htm" target="_blank"
-                                            title="Golden Basmati Rice" class="thumb-img db"> <img loading="lazy"
-                                                src="https://static.exportersindia.com/ei_images/home-slide/golden_basmati_rice.jpg"
-                                                alt="Golden Basmati Rice" width="110" height="110"> </a>
-                                        <a href="/indian-suppliers/golden-basmati-rice.htm" target="_blank"
-                                            title="Golden Basmati Rice" class="thumb-name">Basmati
-                                            Rice</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/water-purifier.htm" target="_blank"
-                                            title="Water Purifier" class="thumb-img db"> <img loading="lazy"
-                                                src="https://img3.exportersindia.com/product_images/bc-small/2019/3/4569737/watermark/embark-ultra-pure-home-king-ro-water-purifier-1549358497-4695875.jpeg"
-                                                alt="Water Purifier" width="221" height="300"> </a>
-                                        <a href="/indian-suppliers/water-purifier.htm" target="_blank"
-                                            title="Water Purifier" class="thumb-name">Water Purifier</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/t-shirt.htm" target="_blank" title="T-Shirts"
-                                            class="thumb-img db"> <img loading="lazy"
-                                                src="https://img1.exportersindia.com/final_catg_image/111260-1.jpg"
-                                                alt="T-Shirts" width="200" height="200"> </a>
-                                        <a href="/indian-suppliers/t-shirt.htm" target="_blank" title="T-Shirts"
-                                            class="thumb-name">T-Shirts</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/necklace-sets.htm" target="_blank"
-                                            title="Necklace Sets" class="thumb-img db"> <img loading="lazy"
-                                                src="https://static.exportersindia.com/ei_images/home-slide/necklace_sets.jpg"
-                                                alt="Necklace Sets" width="110" height="110"> </a>
-                                        <a href="/indian-suppliers/necklace-sets.htm" target="_blank"
-                                            title="Necklace Sets" class="thumb-name">Necklace Sets</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/luggage_and_travel_bags.htm" target="_blank"
-                                            title="Travel Bags" class="thumb-img db"> <img loading="lazy"
-                                                src="https://img1.exportersindia.com/product_images/bc-small/dir_189/5664470/leather-travel-bag-1528196430-3945904.jpeg"
-                                                alt="Travel Bags" width="300" height="253"> </a>
-                                        <a href="/indian-suppliers/luggage_and_travel_bags.htm" target="_blank"
-                                            title="Travel Bags" class="thumb-name">Travel Bags</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/led-lights.htm" target="_blank" title="Led Lights"
-                                            class="thumb-img db"> <img loading="lazy"
-                                                src="https://static.exportersindia.com/ei_images/home-slide/led_lights.jpg"
-                                                alt="Led Lights" width="110" height="110"> </a>
-                                        <a href="/indian-suppliers/led-lights.htm" target="_blank" title="Led Lights"
-                                            class="thumb-name">Led Lights</a>
-                                    </li>
-                                    <li>
-                                        <a href="/indian-suppliers/power-inverters.htm" target="_blank"
-                                            title="Power Inverters" class="thumb-img db"> <img loading="lazy"
-                                                src="https://static.exportersindia.com/ei_images/home-slide/power_inverters.jpg"
-                                                alt="Power Inverters" width="110" height="110"> </a>
-                                        <a href="/indian-suppliers/power-inverters.htm" target="_blank"
-                                            title="Power Inverters" class="thumb-name">Power
-                                            Inverters</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="links">
-                                <li><a href="/post-buy-requirement.php">- Over 16+ Lakh
-                                        Suppliers</a></li>
-                                <li><a href="/post-buy-requirement.php">- More than 75
-                                        Lakh Products</a></li>
-                                <li><a href="/post-buy-requirement.php">- More than 1.2
-                                        Crore Buyers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-
                         </div>
                 </div>
         </section>
         <!-- lg nav bar end here -->
+        <!-- sm banner -->
 
+        <div class="container-fluid d-block d-sm-block d-md-block d-lg-none">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                        <img src="image/banner/banner.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                        <img src="image/banner/banner.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                        <img src="image/banner/banner.jpg" class="d-block w-100" alt="...">
+                                </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+        </div>
         <!-- Trending Categories -->
         <div class="container-fluid margin">
                 <div class="row">
                         <div class="col-12 ">
                                 <div class="py-4 px-3  bg-white shadow-lg rounded">
-                                        <h5 class="mb-3">Trending Categories</h5>
+                                        <h5 class="mb-3"> Categories</h5>
                                         <!-- owl carousel -->
                                         <div class="owl-carousel owl-theme bg-white">
-                                                <div class="item border rounded shadow-sm">
-                                                        <div class="cat_box">
-                                                                <img src="image/categoryimage/1.jpg" height="auto" width="70%" alt="category image">
-                                                                <div class="px-2 pt-2 border-top  text-center">
-                                                                        <p>cat name</p>
-                                                                </div>
+
+                                                <?php
+                                                include "config.php";
+
+                                                $select = "SELECT * from `category`";
+                                                $qu = mysqli_query($con, $select);
+                                                $s_no = 1;
+                                                while ($row = mysqli_fetch_array($qu)) {
+
+
+                                                ?>
+                                                        <div class="item border rounded shadow-sm">
+                                                                <a href="category.php?cat_id=<?php echo $row['cat_id'] ?>">
+                                                                        <div class="cat_box">
+                                                                                <img src="./admin/<?php echo $row['cat_image'] ?>" height="auto" class="p-2 rounded" width="70%" alt="category image">
+                                                                                <div class="px-2 pt-2 border-top  text-center">
+                                                                                        <p><?php echo $row['cat_name'] ?></p>
+                                                                                </div>
+                                                                        </div>
+                                                                </a>
                                                         </div>
-                                                </div>
-                                                <div class="item border rounded shadow-sm">
-                                                        <div class="cat_box">
-                                                                <img src="image/categoryimage/2.jpg" height="auto" width="70%" alt="category image">
-                                                                <div class="px-2 pt-2 border-top  text-center">
-                                                                        <p>cat name</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
+                                                <?php  } ?>
                                         </div>
                                 </div>
                         </div>
@@ -1510,126 +1329,322 @@
         </div>
 
         <!--  -->
-
         <?php
-        include "config.php";
-        $select = "SELECT * from `category` ";
-        $qu = mysqli_query($con, $select);
-        $s_no = 1;
-        while ($row = mysqli_fetch_array($qu)) {
-                $cat_id = $row['cat_id'];
+        include "config.php"; // Assuming this file connects to your database ($con)
 
+        // Check if connection to database was successful
+        if (!$con) {
+                die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $select = "SELECT 
+            c.cat_name, c.cat_id,
+            s.sub_id, s.sub_cat_name, s.sub_cat_image,
+            GROUP_CONCAT(CONCAT_WS(':', i.inner_cat_id, i.inner_cat_name) SEPARATOR '|') AS inner_categories
+        FROM 
+            category c
+        LEFT JOIN 
+            sub_cat s ON c.cat_id = s.cat_id
+        LEFT JOIN 
+            inner_cat i ON s.sub_id = i.sub_id
+        GROUP BY 
+            c.cat_id, s.sub_id";
+
+        $result = mysqli_query($con, $select);
+
+        if (!$result) {
+                die("Query failed: " . mysqli_error($con));
+        }
+
+        $categories = array(); // Array to store categories and their subcategories
+
+        while ($row = mysqli_fetch_array($result)) {
+                $cat_name = $row['cat_name'];
+                $cat_id = $row['cat_id'];
+                $sub_id = $row['sub_id'];
+                $sub_cat_name = $row['sub_cat_name'];
+                $sub_cat_image = $row['sub_cat_image']; // Fetch sub_cat_image
+                $inner_categories_raw = explode('|', $row['inner_categories']); // Convert string to array
+
+                $inner_categories = array();
+                foreach ($inner_categories_raw as $inner_cat_string) {
+                        list($inner_cat_id, $inner_cat_name) = explode(':', $inner_cat_string);
+                        $inner_categories[] = array(
+                                'inner_cat_id' => $inner_cat_id,
+                                'inner_cat_name' => $inner_cat_name
+                        );
+                }
+
+                // Store subcategories and inner categories grouped by categories and subcategories
+                if (!isset($categories[$cat_name])) {
+                        $categories[$cat_name] = array();
+                }
+
+                $categories[$cat_name][] = array(
+                        'cat_id' => $cat_id,
+                        'sub_id' => $sub_id,
+                        'sub_cat_name' => $sub_cat_name,
+                        'sub_cat_image' => $sub_cat_image,
+                        'inner_categories' => $inner_categories
+                );
+        }
+
+        // Display the categories, subcategories, and inner categories in the desired format
+        echo '<div class="container ">';
+        $count1 = 0;
+        foreach ($categories as $category => $subcategories) {
+                echo '<div class="row my-5 border-bottom border-danger border-3 py-3 shadow-lg rounded ">';
+                echo '<div class="col-12">';
+                echo '<h4><a class="text-dark" href="category.php?cat_id=' . $subcategories[0]['cat_id'] . '">' . $category . '</a></h4>';
+
+                echo '<div class="row">';
+                foreach ($subcategories as $subcategory) {
+                        echo '<div class="col-12 col-md-6 my-3 col-lg-3  ">';
+                        echo '<div class="shadow-lg p-3">';
+
+                        // Display subcategory image
+                        if (!empty($subcategory['sub_cat_image'])) {
+                                echo '<div class="text-center mb-3 responsive_image"> <img src="./admin/' . $subcategory['sub_cat_image'] . '" alt="' . $subcategory['sub_cat_name'] . '" class="img_responsive rounded text-center"></div>';
+                        }
+
+                        echo '<p><a class="text-dark" href="sub-cat.php?sub_id=' . $subcategory['sub_id'] . '">' . $subcategory['sub_cat_name'] . '</a></p>';
+                        echo "<hr>";
+                        echo '<ul style=" " class="  ">';
+                        $count = 0;
+                        foreach ($subcategory['inner_categories'] as $innercategory) {
+                                echo '<li><small><a href="product.php?inner_cat_id=' . $innercategory['inner_cat_id'] . '">' . $innercategory['inner_cat_name'] . '</a></small></li>';
+                                $count++;
+                                if ($count >= 4) {
+                                        break;
+                                }
+                        }
+                        echo '</ul>';
+
+                        echo '</div>'; // Close shadow-lg
+                        echo '</div>'; // Close col-3
+                }
+                echo '</div>'; // Close row for subcategories
+
+                echo '</div>'; // Close col-12
+                echo '</div>'; // Close row for category
+                $count1++;
+                if ($count1 >= 6) {
+                        break;
+                }
+        }
+        echo '</div>'; // Close container
+
+        mysqli_close($con); // Close the database connection
         ?>
 
-                <div class="container-fluid margin m-auto my-5 " style="width: 98%;">
-                        <div class="row cat_container ">
-                                <div class="col-12 border py-3 px-3  bg-white rounded shadow-lg">
+        <div class="container-fluid margin    shadow-lg py-5 rounded alert alert-secondary">
 
-                                        <a href="category.php?cat_id=<?php echo $row['cat_id'] ?>">
-                                                <h4><?php echo $row['cat_name'] ?></h4>
-                                        </a>
-                                        <div class="row mt-3">
-                                                <div class="col-12 col-md-3">
-                                                        <div class="hover_image">
-                                                                <img src="./admin/<?php echo $row['cat_long_image'] ?>" height="350px" style="object-fit:cover" width="100%" alt="">
+                <div class="row my-3">
+                        <h4>POPULAR PRODUCTS</h4>
+                        <div class="col-12">
+                                <div class="owl-carousel owl-theme alert">
+                                        <div class="item bg-white rounded">
+                                                <div class="product_card border  p-3  shadow-sm">
+                                                        <div class="img_card">
+                                                                <img src="./admin/extra_image/316170-1.jpg" class="border border-dark border-2 mb-3 rounded" height="auto" width="100%" alt="">
                                                         </div>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                        <div class="row">
-                                                                <?php
-                                                                include "config.php";
-                                                                $select1 = "SELECT * from `sub_cat` where `cat_id`='$cat_id'";
-                                                                $qu1 = mysqli_query($con, $select1);
-                                                                $s_no = 1;
-                                                                while ($row1 = mysqli_fetch_array($qu1)) {
-                                                                        $sub_id1 = $row1['sub_id'];
-                                                                      
-
-                                                                ?>
-                                                                        <div class="col-4">
-                                                                                <div class="card p-3">
-                                                                                        <a href="sub-cat.php?sub_id=<?php echo $sub_id1 ?>" class="text-decoration-none" style="color: black !important;">
-                                                                                                <p class="pb-0 fs-6"><?php echo $row1['sub_cat_name'] ?></p>
-                                                                                        </a>
-                                                                                        <!-- <div class="row">
-                                                                                                <div class="col-7">
-                                                                                                        <?php
-                                                                                                        include "config.php";
-                                                                                                        $select1 = "SELECT * from `inner_cat` where `sub_id`='$sub_id1' limit 5";
-                                                                                                        $qu1 = mysqli_query($con, $select1);
-                                                                                                        $s_no = 1;
-                                                                                                        while ($row2 = mysqli_fetch_array($qu1)) {
-                                                                                                                $inner_cat_name = $row2['inner_cat_name'];
-
-                                                                                                        ?>
-                                                                                                                <p class=" p-0 m-0 d-block"><a href="product.php?inner_cat_id=<?php echo $row2['inner_cat_id'] ?>" class="text-decoration-none p-0 m-0">
-                                                                                                                                <?php echo $row2['inner_cat_name'] ?></a></p>
-                                                                                                        <?php   } ?>
-                                                                                                </div>
-                                                                                                <div class="col-5 align-self-end ">
-                                                                                                        <img src="./admin/<?php echo $row1['sub_cat_image'] ?>" class="rounded" height="auto" width="100%" alt="">
-                                                                                                </div>
-                                                                                        </div> -->
-                                                                                </div>
-                                                                        </div>
-                                                                <?php } ?>
-                                                        </div>
+                                                        <p>abc name </p>
+                                                        <ul class="navbar-nav my-2">
+                                                                <li class="nav-item "><a href="" class="nav-link p-0 m-0"> <small>Price</small> </a></li>
+                                                                <li class="nav-item "><a href="" class="nav-link p-0 m-0"> <small>text</small> </a></li>
+                                                                <li class="nav-item "><a href="" class="nav-link p-0 m-0"> <small>text</small> </a></li>
+                                                        </ul>
+                                                        <a href="" class="btn btn-sm btn-dark">Enquiry</a>
+                                                        <a href="" class="btn btn-sm btn-outline-dark">Details</a>
                                                 </div>
                                         </div>
+
                                 </div>
                         </div>
                 </div>
-        <?php } ?>
-
-        <div class="container margin">
-                <div class="row">
+                <div class="row my-3">
+                        <h4>new arrivals</h4>
                         <div class="col-12">
-                                <div class="owl-carousel owl-theme">
-                                        <div class="item">
-                                                <h4>1</h4>
+                                <div class="owl-carousel owl-carousel owl-theme alert">
+                                        <div class="item   ">
+                                                <div class="product_card bg-white  my-2   p-1 rounded shadow-sm">
+                                                        <div class="img_card p-1">
+                                                                <img src="image/categoryimage/new.jpg" class="  mb-3 rounded" height="150px" width="100%" style="object-fit: cover;" alt="">
+                                                                <hr>
+                                                        </div>
+
+                                                        <p style="height: 6rem;"><small>Three Piece Ball Valve, Size: 100 mm To 200 mm</small><i> <a href="">read More</a></i></p>
+
+                                                        <a href="" class="p-2 text-center d-block text-white w-100">Enquiry</a>
+                                                </div>
+                                                <hr>
+                                                <div class="product_card  bg-white my-2   p-1 rounded shadow-sm">
+                                                        <div class="img_card p-1">
+                                                                <img src="image/categoryimage/new2.jpg" class="  mb-3 rounded" height="150px" width="100%" style="object-fit: cover;" alt="">
+                                                                <hr>
+                                                        </div>
+
+                                                        <p style="height: 6rem;"><small>Three Piece Ball Valve, Size: 100 mm To 200 mm</small><i> <a href="">read More</a></i></p>
+
+                                                        <a href="" class="p-2 text-center d-block text-white w-100">Enquiry</a>
+                                                </div>
                                         </div>
-                                        <div class="item">
-                                                <h4>2</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>3</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>4</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>5</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>6</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>7</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>8</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>9</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>10</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>11</h4>
-                                        </div>
-                                        <div class="item">
-                                                <h4>12</h4>
-                                        </div>
+
                                 </div>
                         </div>
                 </div>
         </div>
+
+        <div class="container-fluid bg-light  bg-icon my-5 py-6   p-5">
+
+
+                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                        <h1 class="display-5 mb-3"> Featured Products</h1>
+                        <p>We are committed to sustainability and environmental stewardship. By implementing eco-friendly
+                                farming practices and minimizing waste throughout our operations, </p>
+                </div>
+                <div class="row justify-content-center ">
+                        <div class="col-12 border wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="owl-carousel owl-carousel owl-theme  ">
+                                        <div class="item   ">
+                                                <div class="product_card bg-white  my-2   p-1 rounded shadow-sm">
+                                                        <div class="img_card p-1">
+                                                                <img src="image/categoryimage/new.jpg" class="  mb-3 rounded" height="150px" width="100%" style="object-fit: cover;" alt="">
+                                                                <hr>
+                                                        </div>
+
+                                                        <p style="height: 6rem;"><small>Three Piece Ball Valve, Size: 100 mm To 200 mm</small><i> <a href="">read More</a></i></p>
+
+                                                        <!-- <a href="" class="p-2 text-center d-block text-white w-100">Enquiry</a> -->
+
+                                                        <a href="" class="btn btn-dark w-100">Enquiry</a>
+
+                                                </div>
+                                                <hr>
+                                                <div class="product_card  bg-white my-2   p-1 rounded shadow-sm">
+                                                        <div class="img_card p-1">
+                                                                <img src="image/categoryimage/new2.jpg" class="  mb-3 rounded" height="150px" width="100%" style="object-fit: cover;" alt="">
+                                                                <hr>
+                                                        </div>
+
+                                                        <p style="height: 6rem;"><small>Three Piece Ball Valve, Size: 100 mm To 200 mm</small><i> <a href="">read More</a></i></p>
+
+                                                        <a href="" class="btn btn-dark w-100">Enquiry</a>
+
+                                                </div>
+                                        </div>
+
+                                </div>
+                        </div>
+
+
+
+                </div>
+        </div>
+
+        <div class="container margin">
+                <div class="row">
+                        <p class="fs-4">Popular Products</p>
+                        <div class="col-12 d-flex flex-wrap cat-anchor">
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                        </div>
+                </div>
+                <div class="row mt-5">
+                        <p class="fs-4">Popular Ctegory</p>
+                        <div class="col-12 d-flex flex-wrap ">
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                                <a href="" class="btn btn-light bg-outline-light border m-1 btn-sm">sfdsdfs</a>
+                        </div>
+                </div>
+        </div>
+
+        <div class="container">
+                <div class="row">
+                        <div class="col-12">
+                                <?php
+                                include "config.php";
+                                $sel = "SELECT * FROM `states`";
+                                $q = mysqli_query($con, $sel);
+                                while ($row = mysqli_fetch_array($q)) {
+                                ?>
+                                        <a href="states.php?state_name=<?php echo $row['state_name'] ?>" class="btn btn-light bg-outline-light border m-1 btn-sm"><?php echo $row['state_name'] ?></a>
+
+
+
+                                <?php } ?>
+                        </div>
+                </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Feature End -->
         <script>
                 $(document).ready(function() {
                         $('.owl-carousel').owlCarousel({
                                 loop: true,
-                                margin: 10,
+                                margin: 20,
                                 responsive: {
                                         0: {
                                                 items: 1
@@ -1638,12 +1653,13 @@
                                                 items: 3
                                         },
                                         1000: {
-                                                items: 7
+                                                items: 6
                                         }
                                 }
                         })
                 })
         </script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
