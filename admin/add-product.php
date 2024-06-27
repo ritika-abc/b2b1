@@ -325,7 +325,80 @@ if (isset($_POST['submit'])) {
     //     });
     // });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Live search for Category dropdown
+    $('#searchCategory').on('input', function() {
+        var query = $(this).val();
 
+        $.ajax({
+            url: 'search_categories.php',
+            type: 'POST',
+            data: { query: query },
+            success: function(response) {
+                $('#category-dropdown').html(response);
+            }
+        });
+    });
+
+    // Live search for Sub Category dropdown
+    $('#searchSubCategory').on('input', function() {
+        var query = $(this).val();
+
+        $.ajax({
+            url: 'search_subcategories.php',
+            type: 'POST',
+            data: { query: query },
+            success: function(response) {
+                $('#sub-category-dropdown').html(response);
+            }
+        });
+    });
+
+    // Live search for Inner Category dropdown
+    $('#searchInnerCategory').on('input', function() {
+        var query = $(this).val();
+
+        $.ajax({
+            url: 'search_innercategories.php',
+            type: 'POST',
+            data: { query: query },
+            success: function(response) {
+                $('#inner-category-dropdown').html(response);
+            }
+        });
+    });
+
+    // Live search for Micro Category dropdown
+    $('#searchMicroCategory').on('input', function() {
+        var query = $(this).val();
+
+        $.ajax({
+            url: 'search_microcategories.php',
+            type: 'POST',
+            data: { query: query },
+            success: function(response) {
+                $('#micro-category-dropdown').html(response);
+            }
+        });
+    });
+
+    // Live search for State Name dropdown
+    $('#searchStateName').on('input', function() {
+        var query = $(this).val();
+
+        $.ajax({
+            url: 'search_states.php',
+            type: 'POST',
+            data: { query: query },
+            success: function(response) {
+                $('#state-name-dropdown').html(response);
+            }
+        });
+    });
+});
+</script>
 <!-- /page content -->
 <?php
 include_once "include/footer.php";
