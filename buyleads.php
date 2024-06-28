@@ -87,7 +87,7 @@
         }
         .live_search_buyleads input:active , .live_search_buyleads select:active {
             border: none;
-            outline: 2px solid red;
+            /* outline: 2px solid red; */
         }
         .live_search_buyleads{
             border: 1px solid gray;
@@ -102,7 +102,7 @@
                     <div class="live_search_buyleads">
                         <form class="">
                             <input type="text" class="p-1 ">
-                            <select name="" id="" class="w-100 ">
+                            <select name="" id="" class="w-100 " style="outline: none;">
                                 <option value="" class=" " > </option>
                             </select>
                         </form>
