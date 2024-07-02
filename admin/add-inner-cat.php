@@ -109,7 +109,7 @@ include_once "include/header.php";
                                 <td><?php echo  $sno ?></td>
                                 <td><img src="<?php echo  $row['inner_cat_image'] ?>" height="50px" width="100px" alt="category image"></td>
                                 <td><?php echo  $row['inner_cat_name'] ?></td>
-                                <td><a href="" class="btn btn-success">Edit</a><a href="" class="btn btn-danger">Delete</a></td>
+                                <td><a href="edit_inner_cat.php?inner_cat_id=<?php echo $row['inner_cat_id'] ?>" class="btn btn-success">Edit</a><a href="" class="btn btn-danger">Delete</a></td>
                             </tr>
                         <?php
                             $sno++;

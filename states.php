@@ -119,7 +119,7 @@
                 echo '<div class="text-center mb-3 responsive_image"> <img src="/new_b2b/admin/' . $subcategory['sub_cat_image'] . '" alt="' . $subcategory['sub_cat_name'] . '" class="img_responsive rounded text-center"></div>';
             }
 
-            echo '<p><a class="text-dark" href="sub-cat.php?sub_id=' . $subcategory['sub_id'] . '">' . $subcategory['sub_cat_name'] . '</a></p>';
+            echo '<p><a class="text-dark" href="sub-cat.php?sub_id=' . $subcategory['sub_id'] ."&state_name=" .$state_name .  '">' . $subcategory['sub_cat_name'] . '</a></p>';
             echo "<hr>";
             echo '<ul style=" " class="  ">';
             

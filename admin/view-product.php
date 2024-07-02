@@ -38,6 +38,7 @@ include_once "include/header.php";
                         <thead>
                             <th>S.No.</th>
                             <th>product image</th>
+                            <th>Logo</th>
                             <th>product name</th>
                             <th>product price</th>
                             <th>product description</th>
@@ -61,6 +62,7 @@ include_once "include/header.php";
                                 <tr>
 
                                     <td class='id'><img src="" height="50px" width="50px" alt=""> <img src="" height="50px" width="50px" alt=""> <img src="" height="50px" width="50px" alt=""></td>
+                                    <td class='id'><img src="" height="50px" width="50px" alt=""> </td>
                                     <td><?php echo $row['product_name']; ?></td>
                                     <td><?php echo $row['price']; ?></td>
                                     <td><?php echo $row['product_description']; ?></td>
@@ -102,11 +104,11 @@ include_once "include/header.php";
                     $result = mysqli_query($con, $sql) or die("Query Failed.");
                     if (mysqli_num_rows($result) > 0) {
                     ?>
-                        <table class="table  table-striped table-light table text-capitalize">
+                        <table class="table  table-striped table-light table text-capitalize w-100">
                             <thead>
                                 <th>S.No.</th>
                                 <th>product image</th>
-                                <th>product name</th>
+                                <th>Company Logo</th>
                                 <th>product price</th>
                                 <th>product description</th>
                                 <th>company name</th>
@@ -120,11 +122,24 @@ include_once "include/header.php";
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                                     <tr>
-                                        <td class='id'><?php echo $serial; ?></td>
-                                        <td class='id'><img src="<?php echo $row['product_image1'] ?>" height="150px" width="150px" alt=""> <img src="<?php echo $row['product_image2'] ?>" height="150px" width="150px" alt=""> <img src="<?php echo $row['product_image3'] ?>" height="150px" width="150px" alt=""></td>
+                                        <td><?php echo $serial; ?></td>
+                                        <td>
+                                            <div class="img_box" style="width: 150px;height:150px;">
+                                                <img src="<?php echo $row['product_image1'] ?>" height="50px" width="50px" alt=""> <img src="<?php echo $row['product_image2'] ?>" height="50px" width="50px" alt=""> <img src="<?php echo $row['product_image3'] ?>" height="50px" width="50px" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="img_box" style="width: 150px;height:150px;">
+                                                <img src="<?php echo $row['company_logo'] ?>" height="50px" width="50px" alt="">
+                                            </div>
+                                        </td>
                                         <td><?php echo $row['product_name']; ?></td>
                                         <td><?php echo $row['price']; ?></td>
-                                        <td><?php echo $row['product_description']; ?></td>
+                                        <td>
+                                            <div class="content_box  border" style="width: 150px;height:150px;overflow:scroll">
+                                                <?php echo $row['product_description']; ?>
+                                            </div>
+                                        </td>
                                         <td><?php echo $row['company_name']; ?></td>
                                         <td><?php echo $row['moq']; ?></td>
                                         <td><?php echo $row['date']; ?></td>

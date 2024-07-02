@@ -1,122 +1,82 @@
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/megadrop.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-    <script src="assets/vendor/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+        <link rel="stylesheet" href="assets/css/megadrop.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+        <script src="assets/vendor/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+        <script src="assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
-    <script src="assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <style>
-        body {
-            background-color: #fdfdfd !important;
-            font-family: "Roboto", sans-serif;
-        }
-    </style>
+        <style>
+                body {
+                        background-color: #fdfdfd !important;
+                        font-family: "Roboto", sans-serif;
+                }
+                 a{
+                    text-decoration:none !important;
+                }
+                
+
+        </style>
 </head>
 
 <body>
 
-    <!-- top nav start here -->
-    <div class="top_nav">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="nav ">
-                        <li class="nav-item"><a href="" class="nav-link text-white">Hi User! <u class="mx-1">sign
-                                    in</u></a></li>
-                        <li class="nav-item   w-50"><a href="" class="nav-link text-white">
-                                <marquee behavior="" direction="">Lorem, ipsum dolor sit
-                                    amet consectetur adipisicing
-                                    elit. Quisquam, et.</marquee>
-                            </a></li>
-                        <li class="nav-item ms-auto "><a href="" class="nav-link  text-white">345345345453</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                For Buyers
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else
-                                        here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                For Seller
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else
-                                        here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <!-- top nav start here -->
+         <section class="d-none d-sm-none d-md-none d-lg-block">
+        <div class="top_nav">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-12">
+                                        <ul class="nav ">
+                                                <li class="nav-item"><a href="supplier-login.php" class="btn btn-dark mt-1"> Login Supplier </a></li>
+                                                <li class="nav-item   w-50"><a href="" class="nav-link text-white">
+                                                                <marquee behavior="" direction="">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                                                        elit. Quisquam, et.</marquee>
+                                                        </a></li>
+                                                <li class="nav-item ms-auto "><a href="" class="nav-link  text-white">345345345453</a></li>
+                                                <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                For Buyers
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                <li>
+                                                                        <hr class="dropdown-divider">
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                For Seller
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                                <li>
+                                                                        <hr class="dropdown-divider">
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
                 </div>
-            </div>
         </div>
-    </div>
-    <!-- top nav end here -->
+        <!-- top nav end here -->
 
-    <!-- logo here -->
-    <div class="header_top">
-
-        <ul class="nav p-3 border shadow-sm">
-            <li class="nav-item me-auto"><a href="" class="nav-link"><img src="assets/image/logo/logo.webp" height="50px" width="180px" alt=""></a></li>
-            <li class="nav-item mt-3">
-                <form action="">
-                    <div class="input_box   ">
-                        <input type="text" class="p-2 px-3 border-end">
-                        <button class="px-2">Submit</button>
-                    </div>
-                </form>
-            </li>
-            <li class="nav-item mt-2 mx-3"><a href="" class=" ">
-                    <div class="user_icon text-center">
-                        <img src="image/icon/mailgif.gif" height="25px" width="25px" alt="">
-                        <br>
-                        <a href="" class="text-decoration-none"><small>Sign In</small></a> / <a href="" class="text-decoration-none"><small>Join</small></a>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mt-2 mx-2"><a href="" class=" ">
-                    <div class="user_icon text-center">
-                        <img src="image/icon/user.png" height="25px" width="25px" alt=""> <br>
-                        <a href="" class="text-decoration-none"> <a href="" class="text-decoration-none"><small>Message</small></a>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mt-2 mx-2"><a href="" class=" ">
-                    <div class="user_icon text-center">
-                        <img src="image/icon/fastcartgif.gif" height="25px" width="25px" alt="">
-                        <br>
-                        <a href="" class="text-decoration-none"> <a href="" class="text-decoration-none"><small>Inquiry
-                                    Basket</small></a>
-
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
     <!-- breadcrumb start here -->
     <div class="container-fluid my-2">
         <div class="row">
@@ -150,6 +110,7 @@
     <?php
     include "config.php";
     $sub_id = $_GET['sub_id'];
+    $state_name = $_GET['state_name'];
     $select = "SELECT * from `inner_cat` where `sub_id`='$sub_id' ";
     $qu = mysqli_query($con, $select);
     $s_no = 1;
@@ -158,7 +119,7 @@
         $inner_cat_id = $row['inner_cat_id'];
 
     ?>
-        <div class="container-fluid my-5 p-3 border rounded bg-white">
+        <div class="container shadow-lg   border-3 border-dark my-5 p-3 border rounded bg-white">
             <h5><?php echo $row['inner_cat_name'] ?></h5>
             <div class="row">
                 <?php
@@ -166,16 +127,16 @@
                 // $inner_cat_id = $_GET['inner_cat_id'];
                 $select1 = "SELECT * from `micro` where `inner_cat_id`='$inner_cat_id' ";
                 $qu1 = mysqli_query($con, $select1);
-                 
+
                 while ($row1 = mysqli_fetch_array($qu1)) {
-                     $micro_cat_image = $row1['micro_cat_image'];
+                    $micro_cat_image = $row1['micro_cat_image'];
 
                 ?>
                     <div class="col-6 col-md-4 col-lg-2 my-2">
-                        <a href="product.php?inner_cat_id=<?php echo $row['inner_cat_id'] ?>" class="text-decoration-none text-dark">
+                        <a href="micro-category.php?micro_id=<?php echo $row1['micro_id'] ?>&state_name=<?php echo $state_name?>" class="text-decoration-none text-dark border   d-block p-2 rounded">
                             <div class="text-center ">
                                 <div class=" ">
-                                    <img src="./admin/<?php echo $row1['micro_cat_image'] ?>" class="rounded border" height="auto" style="object-fit:cover" width="55%" alt="">
+                                    <img src="./admin/<?php echo $row1['micro_cat_image'] ?>" class="rounded " height="auto" style="object-fit:cover" width="55%" alt="">
                                     <p><?php echo $row1['micro_name'] ?></p>
                                 </div>
                             </div>

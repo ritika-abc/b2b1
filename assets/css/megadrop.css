@@ -11,71 +11,7 @@
     background: #0c606e;
 }
 
-/* .input_box {
-    border: 2px solid #e11b22;
-
-}
-
-.input_box button {
-    background-color: transparent;
-    color: white;
-}
-
-.input_box>input,
-.input_box>button {
-    border: none;
-
-}
-
-.input_box>input {
-    width: 300px;
-}
-
-.input_box>input:focus {
-    outline: none;
-}
-
-.input_box {
-    overflow: hidden;
-
-    background: #e11b22;
-    border-radius: 20px;
-
-} */
-
-/* .cat_box>ul>li:hover{
-     background-color: rgb(231, 231, 231);
-   }
-   .mega_drop{
-     width: 100%;
-     border: 1px solid red;
-   }
-   .mega_drop a,.mega_drop li{
-     list-style: none;
-     text-decoration: none;
-  
-   }
-   .mega_drop{
-     position: absolute;
-     left: 20%;
-     top: 15%;
-     width: 80%;
- display: none;
-   }
-   .cat_box{
-     width: 20%;
-     border: 1px solid red;
-   }
-   .hover_text:hover .mega_drop{
-     display: flex;
-     flex-wrap: wrap;
-     padding: 25px;
-    
-   }
-   .mega_drop>ul{
-    width: 33%;
-   
-   } */
+ 
 .nav_container {
     background-color: #f28b00;
 
